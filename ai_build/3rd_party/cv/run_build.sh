@@ -16,7 +16,7 @@ mkdir $BUILD_DIR
 
 pushd $BUILD_DIR
   cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR ..
-  make
+  make VERBOSE=1
   make install
 popd
 

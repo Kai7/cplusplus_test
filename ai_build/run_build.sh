@@ -5,8 +5,11 @@ BUILD_DIR="${PWD}/build/"
 INSTALL_DIR="${PWD}/install/"
 
 THIRD_PARTY_DIR="${PWD}/3rd_party"
-
 CV_INSTALL_PATH="${THIRD_PARTY_DIR}/cv/install"
+if [ ! -d $CV_INSTALL_PATH ]; then
+  echo "CV SDK Not Found."
+  exit 1
+fi
 
 if [ -d $BUILD_DIR ]; then
   rm -rf $BUILD_DIR 
