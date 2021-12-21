@@ -1,5 +1,5 @@
 
-set(CORE_SRCS core.cpp)
+set(CORE_SRCS core.cpp imgwarp.cpp)
 
 set(CORE_DEPS ${OPENCV_LIBS})
 

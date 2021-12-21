@@ -11,6 +11,7 @@ public:
   ~AIMat();
 
   float Trace();
+
 private:
   cv::Mat _m;
 };

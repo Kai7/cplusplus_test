@@ -13,7 +13,9 @@ set(CMAKE_CXX_INIT "${CMAKE_CXX_INIT} -fvisibility=hidden")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_INIT} -s")
 
 set(OPENCV_INCLUDES ${OPENCV_ROOT}/include)
-set(OPENCV_LIBS ${OPENCV_ROOT}/lib/libopencv_core.a)
+set(OPENCV_LIBS ${OPENCV_ROOT}/lib/libopencv_core.a
+                ${OPENCV_ROOT}/share/OpenCV/3rdparty/lib/libtegra_hal.a)
+set(OPENCV_LIBS_EXT ${OPENCV_LIBS} ${OPENCV_ROOT}/lib/libopencv_imgproc.so)
 
 message("==================================================")
 message("[Summary]")
@@ -29,5 +31,6 @@ set(AI_INCLUDES ${CMAKE_SOURCE_DIR}/include/)
 
 include_directories(${AI_INCLUDES} ${OPENCV_INCLUDES})
 add_subdirectory(modules)
+add_subdirectory(sample)
 
 install(DIRECTORY ${AI_INCLUDES} DESTINATION include/ai)
