@@ -1,9 +1,11 @@
 #ifndef _AI_CORE_HPP_
 #define _AI_CORE_HPP_
 
+#define AI_EXPORT __attribute__((visibility("default")))
+
 #include "cv/core.hpp"
 
-class AIMat2D {
+class AI_EXPORT AIMat2D {
 public:
   AIMat2D();
   AIMat2D(uint32_t row, uint32_t col);
@@ -13,7 +15,7 @@ public:
   float Trace();
 
 private:
-  Mat2D _m;
+  cv::Mat2D _m;
 };
 
 #endif

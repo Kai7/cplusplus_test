@@ -1,3 +1,4 @@
+add_compile_options(-fvisibility=hidden)
 
 set(CORE_SRCS core.cpp)
 
